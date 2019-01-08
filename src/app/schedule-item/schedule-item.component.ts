@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Schedule} from '../app.component';
 
 @Component({
@@ -6,11 +6,7 @@ import {Schedule} from '../app.component';
   templateUrl: './schedule-item.component.html',
   styleUrls: ['./schedule-item.component.scss']
 })
-export class ScheduleItemComponent implements OnInit {
+export class ScheduleItemComponent {
   @Input() value: Schedule;
   constructor() { }
-
-  ngOnInit() {
-  }
-
 }
