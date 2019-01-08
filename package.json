@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "remove-demo-unix": "rm -rf projects && rm angular.json && mv angular-clean.json angular.json",
-    "remove-demo-windows": "rmdir /s /q projects && del angular.json && ren angular-clean.json angular.json"
+    "remove-demo-windows": "rmdir /s /q projects && del angular.json && ren angular-clean.json angular.json",
+    "pwa": "ng build --prod && cd dist && http-server -p 8080 && cd .."
   },
   "private": true,
   "dependencies": {

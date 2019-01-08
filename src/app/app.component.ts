@@ -22,6 +22,8 @@ export class AppComponent {
   locationInput = new FormControl();
   descriptionInput = new FormControl();
 
+  networkMode = 'online';
+
   items: Array<Schedule> = [
     {time: '08:00', subject: 'Breakfast with Simon', location: 'Lounge Caffe', description: 'Discuss Q3 targets'},
     {time: '08:30', subject: 'Daily Standup Meeting (recurring)', location: 'Warsaw Spire Office'},
@@ -33,6 +35,10 @@ export class AppComponent {
       description: 'Project evalutation ile declaring a variable and using an if statement is a fine way to conditionally render a component, sometimes you might want to use a'
     },
   ];
+
+  constructor() {
+    navigator.onLine === true ? this.networkMode = 'online' : this.networkMode = 'offline';
+  }
 
   addNewItem() {
     const value: Schedule = {
