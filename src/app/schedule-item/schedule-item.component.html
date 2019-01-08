@@ -1,0 +1,12 @@
+<div class="media schedule-list">
+  <h3 class="h3-responsive font-weight-bold mr-3">{{value.time}}</h3>
+  <div class="media-body mb-3 mb-lg-5">
+    <h6 class="mt-0 font-weight-bold">{{value.subject}}</h6>
+    <hr class="hr-bold mb-0 my-2">
+    <p class="mb-0" *ngIf="value.description">
+      <mdb-icon icon="location-arrow"></mdb-icon>
+      {{value?.location}}
+    </p>
+  </div>
+</div>
+<p class="p-3 blue-grey lighten-5 blue-grey lighten-5" *ngIf="value.description">{{value?.description}}</p>

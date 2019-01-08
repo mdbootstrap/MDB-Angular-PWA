@@ -1,12 +1,82 @@
-<!-- Start your project here-->
-<div style="height: 100vh">
-  <div class="flex-center flex-column">
-    <h1 class="animated fadeIn mb-4">Material Design for Bootstrap (Angular)</h1>
+<main>
+  <div class="container">
+    <section>
 
-    <h5 class="animated fadeIn mb-3">Thank you for using our product. We're glad you're with us.</h5>
-    <h6 class="animated fadeIn mb-3">Start browsing <a href="https://mdbootstrap.com/angular">documentation</a>.</h6>
+      <div class="row">
+        <div class="col-md-12 mb-4">
+          <h2 class="text-uppercase my-3">Schedule</h2>
+          <h5 class="mb-4 d-none d-md-block">Below you can find a schedule of your day.</h5>
 
-    <p class="animated fadeIn text-muted">MDB Team</p>
+          <div class="modal-footer justify-content-center">
+            <a type="button" mdbBtn color="info" class="waves-effect mb-4" (click)="frame.show()"
+               mdbWavesEffect>Add event
+            </a>
+          </div>
+
+          <div *ngFor="let item of items">
+            <app-schedule-item [value]="item"></app-schedule-item>
+          </div>
+
+          <h2 class="text-uppercase mb-3 mt-5 pt-4">Code of conduct</h2>
+          <h6 class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6>
+        </div>
+      </div>
+
+    </section>
   </div>
-</div>
-<!-- /Start your project here-->
+
+  <div mdbModal #frame="mdbModal" class="modal fade top" id="frameModalTop" tabindex="-1" role="dialog"
+       aria-labelledby="myModalLabel" aria-hidden="true" style="overflow-y: auto">
+    <div class="modal-dialog modal-notify modal-info" role="document">
+      <!--Content-->
+      <div class="modal-content">
+        <!--Header-->
+        <div class="modal-header text-center">
+          <h4 class="modal-title white-text w-100 font-weight-bold py-2">Schedule appointment</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="frame.hide()">
+            <span aria-hidden="true" class="white-text">&times;</span>
+          </button>
+        </div>
+
+        <!--Body-->
+        <div class="modal-body">
+
+          <div class="md-form mb-5">
+            <mdb-icon icon="clock-o" class="prefix blue-text"></mdb-icon>
+            <input type="text" id="form1" class="form-control" mdbInputDirective [formControl]="timeInput" required>
+            <label data-error="wrong" data-success="right" for="form1">Time</label>
+          </div>
+
+          <div class="md-form">
+            <mdb-icon icon="pencil" class="prefix grey-text"></mdb-icon>
+            <input type="email" id="form2" class="form-control" mdbInputDirective [formControl]="subjectInput" required>
+            <label data-error="wrong" data-success="right" for="form2">Subject</label>
+          </div>
+
+          <div class="md-form mb-5">
+            <mdb-icon icon="map" class="prefix grey-text"></mdb-icon>
+            <input type="text" id="form3" class="form-control" mdbInputDirective [formControl]="locationInput">
+            <label data-error="wrong" data-success="right" for="form3">Location (optional) </label>
+          </div>
+
+          <div class="md-form">
+            <mdb-icon icon="edit" class="prefix grey-text"></mdb-icon>
+            <input type="email" id="form4" class="form-control" mdbInputDirective [formControl]="descriptionInput">
+            <label data-error="wrong" data-success="right" for="form4">Description (optional) </label>
+          </div>
+
+        </div>
+
+        <div class="modal-footer justify-content-center">
+          <button type="button" mdbBtn color="info" class="waves-effect" (click)="addNewItem()"
+                  mdbWavesEffect [disabled]="timeInput.errors || subjectInput.errors">Add
+          </button>
+        </div>
+
+        <!--Footer-->
+      </div>
+      <!--/.Content-->
+    </div>
+  </div>
+
+</main>
