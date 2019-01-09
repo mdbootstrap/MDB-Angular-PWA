@@ -13,7 +13,7 @@
             </a>
           </div>
 
-          <div *ngFor="let item of items">
+          <div *ngFor="let item of items | async">
             <app-schedule-item [value]="item"></app-schedule-item>
           </div>
 
