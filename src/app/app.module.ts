@@ -12,6 +12,7 @@ import { environment } from '../environments/environment';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {FirebaseService} from './services/firebase.service';
+import {IdbService} from './services/idb.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import {FirebaseService} from './services/firebase.service';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule
   ],
-  providers: [FirebaseService],
+  providers: [FirebaseService, IdbService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
