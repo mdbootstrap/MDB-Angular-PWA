@@ -120,14 +120,14 @@
       <h4 class="text-center">Custom validation messages</h4>
       <form>
         <div class="md-form">
-          <i class="fa fa-envelope prefix"></i>
+          <mdb-icon fas icon="envelope" class="prefix"></mdb-icon>
           <input mdbInputDirective data-error="wrong email" [formControl]="emailFormEx" data-success="valid email" minLength="8" maxLength="25"
             type="email" class="form-control" id="form9" name="email" mdbInputDirective>
           <label for="form9">Type your e-mail</label>
         </div>
 
         <div class="md-form">
-          <i class="fa fa-lock prefix"></i>
+          <mdb-icon fab icon="lock" class="prefix"></mdb-icon>
           <input mdbInputDirective data-error="wrong password" [formControl]="passwordFormEx" data-success="valid password" minLength="10"
             maxLength="25" type="password" class="form-control" id="form10" name="password">
           <label for="form10">Type your password</label>

@@ -50,7 +50,7 @@
     <div class="col-md-6 mx-auto">
       <h4 class="text-center">Icon Prefixes</h4>
       <div class="md-form">
-        <i class="fa fa-envelope prefix"></i>
+        <mdb-icon fas icon="envelope" class="prefix"></mdb-icon>
         <input mdbInputDirective type="text" id="form2" class="form-control">
         <label for="form2">Example label</label>
       </div>
@@ -91,14 +91,14 @@
       <h4 class="text-center">Error or Success Messages</h4>
       <form>
         <div class="md-form">
-          <i class="fa fa-envelope prefix"></i>
+          <mdb-icon fas icon="envelope" class="prefix"></mdb-icon>
           <input mdbInputDirective data-error="wrong email" [formControl]="emailFormEx" data-success="valid email" minLength="8" maxLength="25"
             type="email" class="form-control" id="form9" name="email" mdbInputDirective>
           <label for="form9">Type your e-mail</label>
         </div>
 
         <div class="md-form">
-          <i class="fa fa-lock prefix"></i>
+          <mdb-icon fab icon="lock" class="prefix"></mdb-icon>
           <input mdbInputDirective data-error="wrong password" [formControl]="passwordFormEx" data-success="valid password" minLength="10"
             maxLength="25" type="password" class="form-control" id="form10" name="password">
           <label for="form10">Type your password</label>
@@ -153,12 +153,12 @@
       <form class="form-inline">
 
         <div class="md-form form-group">
-          <i class="fa fa-envelope prefix"></i>
+          <mdb-icon fas icon="envelope" class="prefix"></mdb-icon>
           <input mdbInputDirective type="email" class="form-control" id="form19" name="email">
           <label for="form19">Type your e-mail</label>
         </div>
         <div class="md-form form-group">
-          <i class="fa fa-lock prefix"></i>
+          <mdb-icon fas icon="lock" class="prefix"></mdb-icon>
           <input mdbInputDirective type="password" class="form-control" id="form18" name="password">
           <label for="form18">Type your password</label>
         </div>
@@ -183,7 +183,7 @@
           <!--First column-->
           <div class="col-md-6">
             <div class="md-form">
-              <i class="fa fa-envelope prefix"></i>
+              <mdb-icon fas icon="envelope" class="prefix"></mdb-icon>
               <input mdbInputDirective type="email" class="form-control" id="form17" name="email">
               <label for="form17">Type your e-mail</label>
             </div>
@@ -192,7 +192,7 @@
           <!--Second column-->
           <div class="col-md-6">
             <div class="md-form">
-              <i class="fa fa-lock prefix"></i>
+              <mdb-icon fas icon="lock" class="prefix"></mdb-icon>
               <input mdbInputDirective type="password" class="form-control" id="form15" name="password">
               <label for="form15">Type your password</label>
             </div>
@@ -261,7 +261,7 @@
 
       <!--Textarea with icon prefix-->
       <div class="md-form">
-        <i class="fa fa-pencil prefix"></i>
+        <mdb-icon fas icon="pencil-alt" class="prefix"></mdb-icon>
         <textarea mdbInputDirective type="text" id="form8" class="md-textarea form-control" rows="3"></textarea>
         <label for="form8">Icon Prefix</label>
       </div>

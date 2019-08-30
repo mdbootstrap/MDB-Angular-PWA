@@ -22,7 +22,7 @@ export interface Schedule {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  @ViewChild(ModalDirective) modal: ModalDirective;
+  @ViewChild(ModalDirective, { static: true }) modal: ModalDirective;
 
   timeInput = new FormControl();
   subjectInput = new FormControl();

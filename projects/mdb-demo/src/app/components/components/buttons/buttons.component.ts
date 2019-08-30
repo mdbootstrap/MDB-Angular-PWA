@@ -8,7 +8,7 @@ import { Component, AfterViewInit, Renderer2, ElementRef, ViewChild } from '@ang
 export class ButtonsComponent implements AfterViewInit {
   isCollapsed: any;
   singleModel: any;
-  @ViewChild('button') button: ElementRef;
+  @ViewChild('button', { static: true }) button: ElementRef;
 
   public checkModel: any = { left: true, middle: false, right: false };
   public radioModel: string = 'Left';
